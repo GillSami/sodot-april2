@@ -7,6 +7,7 @@ resource "aws_instance" "web_host" {
   subnet_id = "${aws_subnet.web_subnet.id}"
   user_data = <<EOF
 #! /bin/bash
+export A_SECRET_ACCESS_KEY=wJglrGGtnFEMI/K7MDENG/bPxRfiCYETAMAAAKEA
 export ANOTHER_AWS_SECRET_ACCESS_KEY=PLACE_HOLDER_2
 sudo apt-get update
 sudo apt-get install -y apache2
